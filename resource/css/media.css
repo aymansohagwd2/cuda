@@ -1,0 +1,120 @@
+@media only screen and (max-width:1200px) {
+    header{
+        height: 65vh;
+    }
+    .row{
+        margin: 0 20px;
+    }
+}
+
+@media only screen and (max-width:1024px) {
+    html{
+        font-size: 57.5%;
+    }
+    header{
+        height: 50vh;
+    } 
+    .mobile-menu span{
+        display: block;
+    }
+    .main-nav{
+        display: none; 
+    }
+    .client-img {
+        float: none;
+    }
+    .client-photo{
+        width: 100%;
+        text-align: center;
+    }
+    .client-discription {
+        width: 100%;
+        float: none;
+        text-align: center;
+        margin-left: 0;
+        margin-top: 16px;
+    }
+    #testimonial-section .testimonial-row3 {
+        margin-top: 30px;
+    }
+    .testimonial-row2{
+        margin-top: 30px;
+    }
+    #contuct-section form {
+        width: 100%;
+        margin-top: 30px;
+    }
+}
+
+@media only screen and (max-width:980px) {
+    .span_1_of_4 {
+        width: 49.2%; 
+    }
+    .span_1_of_4:nth-child(3){
+        margin: 0;
+    }
+    footer ul li a:link, a:visited {
+        font-size: 2rem;
+    }
+    footer {
+        padding: 3rem 0;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    html{
+        font-size: 55.5%;
+    }
+    header{
+        height: 70vh;
+    } 
+    .span_1_of_4 {
+        width: 47.2%; 
+    }
+    h1{
+        font-size: 3.3rem !important;
+    }
+    .btn:link, .btn:visited, .btn {
+        padding: 1.8rem 4.8rem;
+        font-size: 1.6rem;
+    }
+    h2{
+        font-size: 3rem;
+    }
+    .little-discription{
+        width: 95% !important;
+    }
+    h3{
+        font-size: 2rem;
+    }
+    footer ul li { 
+        margin: 0 1rem;
+    }
+    .mix-container{
+        margin-top: 4rem;
+    }
+    .portfolio-filter {
+        margin-top: 4.5rem;
+    }
+    #portfolio-section .span_1_of_2 {
+        width: 100%;
+    }
+    .client-discription p {
+        font-size: 1.5rem;
+    }
+    #contuct-section input[type="text"], input[type="email"], input[typw=""], textarea {
+        padding: 1.3rem;
+    }
+    footer ul li a:link, a:visited {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width:480px) {
+    .span_1_of_4{
+        width: 100%;
+    }
+    footer .row{
+        margin: 0;
+    }
+}

@@ -1,0 +1,525 @@
+/* ===========================
+    BASIC SETUP
+=============================*/
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Titillium Web', sans-serif;
+    text-rendering: optimizelegibility;
+    line-height: 1.3;
+}
+ul li{
+    list-style: none;
+}
+/* ===========================
+        REUSABLEE SETUP
+=============================*/
+.clear{
+    overflow: hidden;
+}
+.row{
+    max-width: 114rem;
+    margin: 0 auto;
+}
+section{
+    padding: 8rem 0;
+}
+/* --h2 tag----- */
+h2{
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: .6rem;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+h2::after{
+    content: "";
+    display: block;
+    height: .4rem;
+    width: 8.6rem;
+    background: #14a58c;
+    margin: 1.2rem auto;
+}
+/* ----p tag---- */
+.little-discription{
+    font-size: 1.8rem;
+    width: 60%;
+    margin: 0 auto;
+}
+/* --BUTTON--- */
+.btn:link,
+.btn:visited,
+.btn{
+    padding: 2.2rem 6.8rem;
+    background: black;
+    border-bottom: .3rem solid black;
+    font-size: 1.8rem;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 2.6rem;
+    border-radius: .4rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+}
+/* -----h3 tag ------*/
+h3{
+    font-size: 2.4rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+h4{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    letter-spacing: .2rem;
+}
+a{
+    text-decoration: none;
+}
+.box p{
+    font-size: 1.6rem;
+    font-weight: 300;
+    padding: 1rem;
+    color: #fff;
+}
+/* =================================
+          HEADER SECTION
+===================================*/
+header{
+    background: -webkit-gradient(linear,left top, left bottom,from(rgba(135, 80, 156,0.9)),to(rgba(135, 80, 156,0.9))), url(img/hero-bg.jpg);
+    background: linear-gradient(rgba(135, 80, 156,0.9),rgba(135, 80, 156,0.9)), url(img/hero-bg.jpg);
+    height: 85vh;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.logo{
+    height: 3.5rem;
+    width: auto;
+    margin-top: 4rem;
+    float: left;
+}
+.main-nav{
+    float: right;
+    margin-top: 4rem;;
+}
+.main-nav li{
+    display: inline-block;
+    margin-left: .5rem;
+}
+.main-nav li a:link,
+.main-nav li a:visited{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    display: block;
+    padding: .6rem 1.5rem;
+    border-radius: .4rem;
+    font-size: 1.7rem;
+    letter-spacing: .1rem;
+}
+.main-nav li:hover a:link,
+.main-nav li:hover a:visited{
+    background: #643a79;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+.main-nav li:first-child{
+    margin-left: 0;
+}
+.active {
+    background: rgba(100, 58, 121, 1) !important;
+    border-radius: .3rem
+}
+/* -----sticky menu------------ */
+.sticky{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(100, 58, 121, .9);
+    padding: 1.5rem 0;
+    -webkit-box-shadow: 0 .2rem .5rem rgba(255, 255, 255, 0.9);
+    box-shadow: 0 .2rem .5rem rgba(255, 255, 255, 0.9);
+    z-index: 100;
+}
+.sticky .logo{
+    margin-top: 0;
+}
+.sticky .main-nav{
+    margin-top: 0;
+}
+.sticky .active{
+    background: #643a79 !important; 
+    border-radius: .4rem;
+}
+/* ----------------------------------------
+                    
+---------------mobile menu------------ */
+.mobile-menu span{
+    color: white;
+    float: right;
+    font-size: 4rem;
+    margin-right: 2rem;
+    margin-top: 4rem;
+    cursor: pointer !important;
+    display: none;
+
+}
+.sticky .mobile-menu span{
+    margin-top: 0;
+}
+.main-overlay-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.9);
+    height: 100%;
+    z-index: 9;
+    overflow: hidden;
+    width: 0;
+    transition: .5s all ease;
+    -webkit-transition: .5s all ease;
+    -o-transition: .5s all ease;
+    -moz-transition: .5s all ease;
+}
+.overlay-menu{
+    position: relative;
+    top: 25%;
+    width: 60%;
+    text-align: center;
+    margin: 0 auto;
+}
+.mobile-menu .main-overlay-menu .overlay-menu a {
+    display: block;
+    font-size: 17px;
+    color: rgb(197, 183, 183);
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    padding: 1rem 0;
+}
+.mobile-menu .main-overlay-menu .overlay-menu a:hover{
+    color: #fff;
+}
+.closebtn{
+    position: absolute;
+    font-size: 7rem;
+    color: #999;
+    right: 2.5rem;
+}
+.closebtn:hover{
+    color: white;
+}
+/* ------header text box--------- */
+.header-text-box{
+    position: absolute;
+    top: 50%;
+    left: 48%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    text-align: center;
+    width: 90%;
+}
+.header-text{
+    font-size: 4.3rem;
+    color: white;
+    text-align: center;
+}
+.header-btn:link,
+.header-btn:visited{
+    border-color:#c86a40;
+    background: #eb7d4b;
+}
+/* ======================================
+          SERVICES SECTION
+=========================================*/
+.service-section{
+    background: -webkit-gradient(linear,left top, left bottom,from(rgba(23, 194, 164,0.9)),to(rgba(23, 194, 164,0.9))),url(img/services-bg.jpg);
+    background: linear-gradient(rgba(23, 194, 164,0.9),rgba(23, 194, 164,0.9)),url(img/services-bg.jpg);
+    background-repeat: no-repeat; 
+    background-position: center top;
+    background-size: cover;
+    color: white;
+    text-align: center;
+}
+.service-icon{
+    margin-top: 5.5rem;
+    height: 12.8rem;
+    margin-bottom: 3.5rem;
+}
+
+/* ======================================
+          TEAM SECTION
+=========================================*/
+#team-section{
+    background: -webkit-gradient(linear,left top, left bottom,from(rgba(231, 241, 248,0.9)),to(rgba(231, 241, 248,0.9))), url(img/team-bg.jpg);
+    background: linear-gradient(rgba(231, 241, 248,0.9),rgba(231, 241, 248,0.9)), url(img/team-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    color: #000;
+}
+#team-section h2::after{
+    background: #c8d9e5;
+}
+.team-member{
+    margin-top: 5.5rem;
+    margin-bottom: 3.5rem;
+    height: 20rem;
+    width: 20rem;
+    border-radius: 50%;
+}
+.role{
+    text-transform: capitalize;
+    color: #30bae7;
+    font-size: 1.6rem;
+}
+
+#team-section .box p{
+    color: #3c4761;
+    line-height: 1.5;
+}
+.social-links ul li{
+    display: inline-block;
+}
+.social-links ul li a:link,
+.social-links ul li a:visited{
+   color: white;
+   margin: .5rem;
+}
+.social-links ul li a:link i::before{
+     display: inline-block;
+     height: 2rem;
+     font-size: 2rem; 
+     width: 2rem;
+     background: #bdd1df;
+    padding: 1rem;
+    border-radius: 50%;
+}
+.social-links ul li:hover a:link i::before{
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    background: #393939;
+}
+/* =================================
+          SKILL SECTION
+===================================*/
+#skill-section{
+    background: radial-gradient(rgba(255, 255, 255, 0.9),rgba(255, 255, 255, 0.9)) ,url(img/skill-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+#skill-section h2::after{
+    background: #dfe8ed;
+}
+#skill-section .little-discription{
+    padding: 0 40px;
+}
+
+svg.radial-progress circle{
+    stroke-width: 5;
+
+}
+svg.radial-progress text{
+    fill: #393939;
+}
+svg.web-design circle{
+    stroke: #30bae7;
+}
+svg.html circle{
+    stroke: #d74680;
+}
+svg.graphic-design circle{
+    stroke: #15c7a8;
+}
+svg.ui-ux circle{
+    stroke: #eb7d4b;
+}
+#skill-section .box{
+    margin-top: 6.5rem;
+}
+/* =================================
+          portfolio SECTION
+===================================*/
+#portfolio-section{
+    background:  radial-gradient(rgba(255, 221, 153, 0.9), rgba(255, 221, 153,0.9)) ,url(img/portfolio-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    text-align: center;
+}
+#portfolio-section h2::after{
+    background: #e5c37f;
+}
+.portfolio-filter{
+    margin-top: 4.5rem;
+    margin-bottom: 4.5rem;
+}
+.portfolio-filter button{
+    margin: 0.5rem;
+    font-size: 1.8rem;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    background: #ebc985;
+    border: 0;
+    border-radius: .5rem;
+    cursor: pointer;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    outline: none;
+}
+.portfolio-filter button:hover{
+    -webkit-box-shadow: inset 2px 3px 27px black;
+    box-shadow: inset 2px 3px 27px black;
+}
+.portfolio-img{
+    width: 100%;
+    height: auto;
+}
+#portfolio-section .col:nth-child(3){
+    margin-left: 0;
+}
+#portfolio-section .btn-load-more{
+    background: #17c2a4;
+    border-color: #14a58c;
+    margin-top: 5rem;
+}
+#portfolio-section .mixitup-control-active{
+    background: #fff;
+}
+/* =================================
+          portfolio SECTION
+===================================*/
+#testimonial-section{
+    background: radial-gradient(rgba(214, 70, 128, 0.9), rgba(215, 70, 128,0.9)) ,url(img/testimonial-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    color: white;
+
+}
+#testimonial-section .little-discription, h2{
+    text-align: center;
+}
+.client-img{
+    float: left;
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+}
+.testimonial-row2{
+    margin-top: 5rem;
+}
+#testimonial-section .testimonial-row3{
+    margin-top: 8rem;
+}
+.client-discritption{
+    float: left;
+}
+.client-discription p{
+    font-size: 2.1rem;
+}
+.client-discription{
+    width: 38rem;
+    float: left;
+    margin-left: 5rem;
+}
+.client-discription h3{
+    margin-top: 1.5rem;
+}
+.client-discription span{
+    color: #ffdd99;
+}
+/* =================================
+          CONTUCT SECTION
+===================================*/
+#contuct-section{
+    background: #3c5499;
+    background: radial-gradient(rgba(60, 84, 153, 0.9),rgba(60, 84, 153, 0.9)) ,url(img/contact-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    text-align: center;
+    color: white;
+    background-attachment: fixed;
+}
+#contuct-section h2::after{
+    background: #273a71;
+}
+#contuct-section form{
+    /* margin-top: 5.5rem; */
+    width: 70%;
+    margin: 0 auto;
+    /* margin-top: 5.5rem; */
+}
+#contuct-section input[type="text"],input[type="email"],input[typw=""],textarea{
+    background: #273a71;
+    border: .1rem solid #273a71;
+    width: 100%;
+    padding: 2rem;
+    border-radius: .5rem;
+    font-size: 2rem;
+    margin: 1rem;
+}
+#contuct-section form ::-webkit-input-placeholder{
+    color: #fff;
+    opacity: 1;
+}
+#contuct-section form :-ms-input-placeholder{
+    color: #fff;
+    opacity: 1;
+}
+#contuct-section form ::placeholder{
+    color: #fff;
+    opacity: 1;
+}
+#contuct-section .btn{
+     border: none; 
+     background: #30bae7;
+     border-bottom: .3rem solid #299ec5;
+     border-radius: .5rem;
+     cursor: pointer;
+}
+/* =================================
+          FOOTER SECTION
+===================================*/
+footer{
+    background: #344b8e;
+    padding: 3.5rem 0;
+    text-align: center;
+    border-top: .1rem solid rgba(255, 255, 255, 0.3)
+}
+footer ul li{
+    display: inline-block;
+    margin: 0 2rem;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+footer ul li a:link,a:visited{
+    font-size: 2.4rem;
+    color: white;
+    text-transform: capitalize;
+}
+footer ul li:hover a{
+    color: #30bae7;
+}
